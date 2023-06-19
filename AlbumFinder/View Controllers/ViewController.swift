@@ -13,9 +13,12 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchArtist()
+    }
+    
+    private func fetchArtist() {
         let url = getURL(for: artist)
-
+        
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
