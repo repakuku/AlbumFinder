@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     private let artist = DataStore.shared.artist
     
