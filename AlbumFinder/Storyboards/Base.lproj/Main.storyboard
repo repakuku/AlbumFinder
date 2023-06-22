@@ -82,15 +82,55 @@
                                                 <constraint firstAttribute="width" constant="100" id="IxK-i0-2d0"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8a-7k-NEr">
+                                            <rect key="frame" x="108" y="0.0" width="277" height="20.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U36-xf-E2e">
+                                            <rect key="frame" x="108" y="54.333333333333336" width="277" height="18.000000000000007"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-vx-V3Z">
+                                            <rect key="frame" x="108" y="28.333333333333329" width="277" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2T-qc-c6K">
+                                            <rect key="frame" x="108" y="80.333333333333329" width="277" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="c1V-vx-V3Z" secondAttribute="trailing" constant="8" id="1yu-A8-jab"/>
+                                        <constraint firstItem="j2T-qc-c6K" firstAttribute="top" secondItem="U36-xf-E2e" secondAttribute="bottom" constant="8" symbolic="YES" id="75F-X9-Txg"/>
+                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" symbolic="YES" id="7J9-Eq-7U0"/>
+                                        <constraint firstAttribute="trailing" secondItem="j2T-qc-c6K" secondAttribute="trailing" constant="8" id="HRM-vJ-v9N"/>
+                                        <constraint firstItem="U36-xf-E2e" firstAttribute="top" secondItem="c1V-vx-V3Z" secondAttribute="bottom" constant="8" symbolic="YES" id="N1x-vY-QS0"/>
+                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="top" secondItem="i8a-7k-NEr" secondAttribute="bottom" constant="8" symbolic="YES" id="OHo-hf-yZQ"/>
                                         <constraint firstAttribute="bottom" secondItem="bUX-uh-16t" secondAttribute="bottom" id="QQI-Yj-FIc"/>
+                                        <constraint firstAttribute="trailing" secondItem="U36-xf-E2e" secondAttribute="trailing" constant="8" id="a2d-cL-eak"/>
+                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="bnN-46-BAM"/>
                                         <constraint firstItem="bUX-uh-16t" firstAttribute="leading" secondItem="soq-cF-iFn" secondAttribute="leading" id="hmE-wY-qTy"/>
                                         <constraint firstItem="bUX-uh-16t" firstAttribute="top" secondItem="soq-cF-iFn" secondAttribute="top" id="rTH-Ve-1ir"/>
+                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="top" secondItem="soq-cF-iFn" secondAttribute="top" id="rpe-1m-kX7"/>
+                                        <constraint firstAttribute="trailing" secondItem="i8a-7k-NEr" secondAttribute="trailing" constant="8" id="tha-cN-1jh"/>
+                                        <constraint firstItem="j2T-qc-c6K" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="wFJ-N9-7nb"/>
+                                        <constraint firstItem="U36-xf-E2e" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" symbolic="YES" id="wrj-n4-IUp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="albumImageView" destination="bUX-uh-16t" id="fQJ-nV-FHG"/>
+                                    <outlet property="albumNameLabel" destination="i8a-7k-NEr" id="NX3-HD-G5r"/>
+                                    <outlet property="genreLabel" destination="c1V-vx-V3Z" id="5DD-Nr-8mq"/>
+                                    <outlet property="priceLabel" destination="j2T-qc-c6K" id="jxH-rB-tq7"/>
+                                    <outlet property="tracksCountLabel" destination="U36-xf-E2e" id="gb7-rk-4Gu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
