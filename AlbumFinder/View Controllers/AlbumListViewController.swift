@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumListViewController: UITableViewController {
+final class AlbumListViewController: UITableViewController {
     
     var artistName: String!
     
