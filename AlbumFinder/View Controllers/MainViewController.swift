@@ -8,18 +8,30 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-
-    private let artist = DataStore.shared.artist
+    
+    @IBOutlet var artistTF: UITextField!
+    
+    private let artistName = DataStore.shared.artist
+    private var artist: Artist!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchArtist()
     }
     
-    private func fetchArtist() {
-        let url = getURL(for: artist)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    private func fetchArtist() {
+        let url = getURL(for: artistName)
+        
+        URLSession.shared.dataTask(with: url) { [unowned self] data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
@@ -27,9 +39,7 @@ final class MainViewController: UIViewController {
             
             do {
                 let decoder = JSONDecoder()
-                let artist = try decoder.decode(Artist.self, from: data)
-            
-                print(artist)
+                self.artist = try decoder.decode(Artist.self, from: data)
             } catch {
                 print(error)
             }
