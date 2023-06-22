@@ -15,8 +15,7 @@ final class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let albumListVC = segue.destination as? AlbumListViewController else { return }
-        let url = networkManager.getURL(for: artistTF.text ?? "")
-        albumListVC.url = url
+        albumListVC.artistName = artistTF.text ?? ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -9,7 +9,7 @@ import UIKit
 
 class AlbumListViewController: UITableViewController {
     
-    var url: URL!
+    var artistName: String!
     
     private let networkManager = NetworkManager.shared
     private var artist: Artist = Artist(resultCount: 0, results: [])
@@ -17,7 +17,9 @@ class AlbumListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
+        title = "Results for \"\(artistName ?? "")\""
         
+        let url = networkManager.getURL(for: artistName)
         networkManager.fetchAlbums(from: url) { [weak self] result in
             switch result {
             case .success(let artist):
