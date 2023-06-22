@@ -16,7 +16,6 @@ final class AlbumCell: UITableViewCell {
     @IBOutlet var genreLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     
-    
     private let networkManager = NetworkManager.shared
     
     func configure(with album: Result) {
@@ -35,5 +34,4 @@ final class AlbumCell: UITableViewCell {
             }
         }
     }
-    
 }
