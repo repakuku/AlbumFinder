@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0726AC702A44D26300A19F45 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0726AC6F2A44D26300A19F45 /* AlbumListViewController.swift */; };
 		072F46982A3FBBC3000D2A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F46972A3FBBC3000D2A91 /* AppDelegate.swift */; };
 		072F469A2A3FBBC3000D2A91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F46992A3FBBC3000D2A91 /* SceneDelegate.swift */; };
 		072F469C2A3FBBC3000D2A91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F469B2A3FBBC3000D2A91 /* MainViewController.swift */; };
@@ -14,12 +15,12 @@
 		072F46A12A3FBBC3000D2A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072F46A02A3FBBC3000D2A91 /* Assets.xcassets */; };
 		072F46A42A3FBBC3000D2A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072F46A22A3FBBC3000D2A91 /* LaunchScreen.storyboard */; };
 		072F46AE2A3FBBE2000D2A91 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F46AD2A3FBBE2000D2A91 /* Artist.swift */; };
-		0775CDCF2A44BBDD00429D2A /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDCE2A44BBDD00429D2A /* AlbumListViewController.swift */; };
 		0775CDD12A44BCB900429D2A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDD02A44BCB900429D2A /* NetworkManager.swift */; };
 		0775CDD42A44BF1C00429D2A /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDD32A44BF1C00429D2A /* AlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0726AC6F2A44D26300A19F45 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		072F46942A3FBBC3000D2A91 /* AlbumFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		072F46972A3FBBC3000D2A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		072F46992A3FBBC3000D2A91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		072F46A32A3FBBC3000D2A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		072F46A52A3FBBC3000D2A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072F46AD2A3FBBE2000D2A91 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		0775CDCE2A44BBDD00429D2A /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		0775CDD02A44BCB900429D2A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0775CDD32A44BF1C00429D2A /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				072F469B2A3FBBC3000D2A91 /* MainViewController.swift */,
-				0775CDCE2A44BBDD00429D2A /* AlbumListViewController.swift */,
+				0726AC6F2A44D26300A19F45 /* AlbumListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -208,11 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				072F469C2A3FBBC3000D2A91 /* MainViewController.swift in Sources */,
+				0726AC702A44D26300A19F45 /* AlbumListViewController.swift in Sources */,
 				072F46982A3FBBC3000D2A91 /* AppDelegate.swift in Sources */,
 				072F46AE2A3FBBE2000D2A91 /* Artist.swift in Sources */,
 				0775CDD42A44BF1C00429D2A /* AlbumCell.swift in Sources */,
 				0775CDD12A44BCB900429D2A /* NetworkManager.swift in Sources */,
-				0775CDCF2A44BBDD00429D2A /* AlbumListViewController.swift in Sources */,
 				072F469A2A3FBBC3000D2A91 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

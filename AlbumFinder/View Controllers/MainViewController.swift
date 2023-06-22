@@ -13,33 +13,16 @@ final class MainViewController: UIViewController {
     
     private let networkManager = NetworkManager.shared
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let albumListVC = segue.destination as? AlbumListViewController else { return }
-        
         let url = networkManager.getURL(for: artistTF.text ?? "")
-
-        networkManager.fetchAlbums(from: url) { result in
-            switch result {
-            case .success(let artist):
-                print(artist)
-                albumListVC.artist = artist
-            case .failure(let error):
-                print(error)
-            }
-        }
+        albumListVC.url = url
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
-
 }
 
 
