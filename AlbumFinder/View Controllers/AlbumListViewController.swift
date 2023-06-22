@@ -8,10 +8,11 @@
 import UIKit
 
 final class AlbumListViewController: UITableViewController {
+    
+    var artist: Artist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     // MARK: - UITableViewDataSource
