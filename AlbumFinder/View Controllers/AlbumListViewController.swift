@@ -19,7 +19,12 @@ final class AlbumListViewController: UITableViewController {
         tableView.rowHeight = 100
         title = "Results for \"\(artistName ?? "")\""
         
+        fetchAlbums()
+    }
+    
+    private func fetchAlbums() {
         let url = networkManager.getURL(for: artistName)
+        
         networkManager.fetchAlbums(from: url) { [weak self] result in
             switch result {
             case .success(let artist):
@@ -49,5 +54,10 @@ final class AlbumListViewController: UITableViewController {
         cell.configure(with: album)
         
         return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -7,10 +7,10 @@
 
 struct Artist: Decodable {
     let resultCount: Int
-    let results: [Result]
+    let results: [ResultInfo]
 }
 
-struct Result: Decodable {
+struct ResultInfo: Decodable {
     let collectionName: String
     let artworkUrl100: String
     let collectionPrice: Double

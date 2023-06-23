@@ -24,7 +24,7 @@ final class NetworkManager {
         return url
     }
     
-    func fetchAlbums(from url: URL, completion: @escaping(Swift.Result<Artist, NetworkError>) -> Void) {
+    func fetchAlbums(from url: URL, completion: @escaping(Result<Artist, NetworkError>) -> Void) {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
@@ -44,7 +44,7 @@ final class NetworkManager {
         }.resume()
     }
     
-    func fetchImage(from url: URL, completion: @escaping(Swift.Result<Data, NetworkError>) -> Void) {
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: url) else {

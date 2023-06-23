@@ -18,7 +18,7 @@ final class AlbumCell: UITableViewCell {
     
     private let networkManager = NetworkManager.shared
     
-    func configure(with album: Result) {
+    func configure(with album: ResultInfo) {
         albumNameLabel.text = album.collectionName
         tracksCountLabel.text = "Number of tracks: \(String(album.trackCount))"
         genreLabel.text = "Genre: \(album.primaryGenreName)"

@@ -11,8 +11,6 @@ final class MainViewController: UIViewController {
     
     @IBOutlet var artistTF: UITextField!
     
-    private let networkManager = NetworkManager.shared
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let albumListVC = segue.destination as? AlbumListViewController else { return }
         albumListVC.artistName = artistTF.text ?? ""
