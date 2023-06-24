@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 final class AlbumListViewController: UITableViewController {
     
@@ -29,11 +30,11 @@ final class AlbumListViewController: UITableViewController {
             switch result {
             case .success(let artist):
                 self?.artist = artist
-                
+
                 if artist.resultCount == 0 {
                     self?.title = "No results for \"\(self?.artistName ?? "")\""
                 }
-                
+
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error)

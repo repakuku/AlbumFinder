@@ -25,7 +25,7 @@ final class AlbumCell: UITableViewCell {
         priceLabel.text = "$\(String(album.collectionPrice))"
         
         guard let url = URL(string: album.artworkUrl100) else { return }
-        networkManager.fetchImage(from: url) { [weak self] result in
+        networkManager.fetchData(from: url) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.albumImageView.image = UIImage(data: imageData)

@@ -6,12 +6,7 @@
 //
 
 import Foundation
-
-enum NetworkError: Error {
-    case invalidURL
-    case noData
-    case decodingError
-}
+import Alamofire
 
 final class NetworkManager {
     static let shared = NetworkManager()
@@ -24,36 +19,30 @@ final class NetworkManager {
         return url
     }
     
-    func fetchAlbums(from url: URL, completion: @escaping(Result<Artist, NetworkError>) -> Void) {
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                completion(.failure(.noData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let artist = try decoder.decode(Artist.self, from: data)
-                DispatchQueue.main.async {
+    func fetchAlbums(from url: URL, completion: @escaping(Result<Artist, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let artist = Artist.getArtist(from: value)
                     completion(.success(artist))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch {
-                completion(.failure(.decodingError))
             }
-        }.resume()
     }
     
-    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else {
-                completion(.failure(.noData))
-                return
+    func fetchData(from url: URL, completion: @escaping(Result<Data, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { dataResponse in
+                switch dataResponse.result {
+                case .success(let imageData):
+                    completion(.success(imageData))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            DispatchQueue.main.async {
-                completion(.success(imageData))
-            }
-        }
     }
 }
