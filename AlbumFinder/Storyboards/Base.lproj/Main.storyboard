@@ -37,6 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="searchAlbumButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nq6-qw-mpb"/>
                                             <segue destination="fHi-R8-MRl" kind="show" identifier="showAlbums" id="EQQ-3W-vMs"/>
                                         </connections>
                                     </button>
@@ -149,7 +150,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1xa-K0-HXZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rd3-3y-cMl">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

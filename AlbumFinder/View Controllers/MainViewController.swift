@@ -25,10 +25,16 @@ final class MainViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
+    @IBAction func searchAlbumButtonPressed() {
+        artistTF.resignFirstResponder()
+    }
+    
 }
 
 extension MainViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         performSegue(withIdentifier: "showAlbums", sender: nil)
         return true
     }
