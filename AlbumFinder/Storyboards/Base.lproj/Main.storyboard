@@ -37,7 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="fHi-R8-MRl" kind="show" id="EQQ-3W-vMs"/>
+                                            <segue destination="fHi-R8-MRl" kind="show" identifier="showAlbums" id="EQQ-3W-vMs"/>
                                         </connections>
                                     </button>
                                 </subviews>
