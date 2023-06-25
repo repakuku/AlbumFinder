@@ -14,7 +14,6 @@ final class AlbumCell: UITableViewCell {
     @IBOutlet var albumNameLabel: UILabel!
     @IBOutlet var tracksCountLabel: UILabel!
     @IBOutlet var genreLabel: UILabel!
-    @IBOutlet var priceLabel: UILabel!
     
     private let networkManager = NetworkManager.shared
     
@@ -22,10 +21,8 @@ final class AlbumCell: UITableViewCell {
         albumNameLabel.text = album.collectionName
         tracksCountLabel.text = "Number of tracks: \(String(album.trackCount))"
         genreLabel.text = "Genre: \(album.primaryGenreName)"
-        priceLabel.text = "$\(String(album.collectionPrice))"
         
-        guard let url = URL(string: album.artworkUrl100) else { return }
-        networkManager.fetchData(from: url) { [weak self] result in
+        networkManager.fetchData(from: album.artworkUrl100) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.albumImageView.image = UIImage(data: imageData)

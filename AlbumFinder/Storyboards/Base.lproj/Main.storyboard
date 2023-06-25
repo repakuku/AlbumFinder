@@ -22,14 +22,14 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PZI-o0-lVR">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAf-FL-cMY">
                                         <rect key="frame" x="0.0" y="54" width="288" height="34.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Search Albums">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -90,54 +90,44 @@
                                                 <constraint firstAttribute="width" constant="100" id="IxK-i0-2d0"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8a-7k-NEr">
-                                            <rect key="frame" x="108" y="0.0" width="204" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8a-7k-NEr">
+                                            <rect key="frame" x="108" y="8" width="204" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U36-xf-E2e">
-                                            <rect key="frame" x="108" y="54.5" width="204" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U36-xf-E2e">
+                                            <rect key="frame" x="108" y="55" width="204" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-vx-V3Z">
-                                            <rect key="frame" x="108" y="28.5" width="204" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2T-qc-c6K">
-                                            <rect key="frame" x="108" y="80.5" width="204" height="12"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-vx-V3Z">
+                                            <rect key="frame" x="108" y="77.5" width="204" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="c1V-vx-V3Z" secondAttribute="trailing" constant="8" id="1yu-A8-jab"/>
-                                        <constraint firstItem="j2T-qc-c6K" firstAttribute="top" secondItem="U36-xf-E2e" secondAttribute="bottom" constant="8" symbolic="YES" id="75F-X9-Txg"/>
-                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" symbolic="YES" id="7J9-Eq-7U0"/>
-                                        <constraint firstAttribute="trailing" secondItem="j2T-qc-c6K" secondAttribute="trailing" constant="8" id="HRM-vJ-v9N"/>
-                                        <constraint firstItem="U36-xf-E2e" firstAttribute="top" secondItem="c1V-vx-V3Z" secondAttribute="bottom" constant="8" symbolic="YES" id="N1x-vY-QS0"/>
-                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="top" secondItem="i8a-7k-NEr" secondAttribute="bottom" constant="8" symbolic="YES" id="OHo-hf-yZQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="c1V-vx-V3Z" secondAttribute="trailing" constant="8" id="2z6-N2-QJ0"/>
+                                        <constraint firstItem="U36-xf-E2e" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="3oP-zf-bxC"/>
+                                        <constraint firstAttribute="bottom" secondItem="c1V-vx-V3Z" secondAttribute="bottom" constant="8" id="8Du-xu-hGS"/>
+                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="9Jc-jA-k5D"/>
+                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="Eyy-bx-JRK"/>
                                         <constraint firstAttribute="bottom" secondItem="bUX-uh-16t" secondAttribute="bottom" id="QQI-Yj-FIc"/>
-                                        <constraint firstAttribute="trailing" secondItem="U36-xf-E2e" secondAttribute="trailing" constant="8" id="a2d-cL-eak"/>
-                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="bnN-46-BAM"/>
                                         <constraint firstItem="bUX-uh-16t" firstAttribute="leading" secondItem="soq-cF-iFn" secondAttribute="leading" id="hmE-wY-qTy"/>
+                                        <constraint firstItem="c1V-vx-V3Z" firstAttribute="top" secondItem="U36-xf-E2e" secondAttribute="bottom" constant="8" id="oXy-N9-7AQ"/>
+                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="top" secondItem="soq-cF-iFn" secondAttribute="top" constant="8" id="per-Kq-DVc"/>
                                         <constraint firstItem="bUX-uh-16t" firstAttribute="top" secondItem="soq-cF-iFn" secondAttribute="top" id="rTH-Ve-1ir"/>
-                                        <constraint firstItem="i8a-7k-NEr" firstAttribute="top" secondItem="soq-cF-iFn" secondAttribute="top" id="rpe-1m-kX7"/>
-                                        <constraint firstAttribute="trailing" secondItem="i8a-7k-NEr" secondAttribute="trailing" constant="8" id="tha-cN-1jh"/>
-                                        <constraint firstItem="j2T-qc-c6K" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" id="wFJ-N9-7nb"/>
-                                        <constraint firstItem="U36-xf-E2e" firstAttribute="leading" secondItem="bUX-uh-16t" secondAttribute="trailing" constant="8" symbolic="YES" id="wrj-n4-IUp"/>
+                                        <constraint firstAttribute="trailing" secondItem="i8a-7k-NEr" secondAttribute="trailing" constant="8" id="tkq-dE-2il"/>
+                                        <constraint firstAttribute="trailing" secondItem="U36-xf-E2e" secondAttribute="trailing" constant="8" id="ybS-6Q-99R"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="albumImageView" destination="bUX-uh-16t" id="fQJ-nV-FHG"/>
                                     <outlet property="albumNameLabel" destination="i8a-7k-NEr" id="NX3-HD-G5r"/>
                                     <outlet property="genreLabel" destination="c1V-vx-V3Z" id="5DD-Nr-8mq"/>
-                                    <outlet property="priceLabel" destination="j2T-qc-c6K" id="jxH-rB-tq7"/>
                                     <outlet property="tracksCountLabel" destination="U36-xf-E2e" id="gb7-rk-4Gu"/>
                                 </connections>
                             </tableViewCell>
@@ -151,7 +141,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35V-n6-IPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890.8396946564885" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1890" y="-2.112676056338028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DPl-03-kMC">

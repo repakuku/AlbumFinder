@@ -30,15 +30,20 @@ struct Artist: Decodable {
 struct ResultInfo: Decodable {
     let collectionName: String
     let artworkUrl100: String
-    let collectionPrice: Double
     let trackCount: Int
     let primaryGenreName: String
     
     init(resultInfoData: [String: Any]) {
         collectionName = resultInfoData["collectionName"] as? String ?? ""
         artworkUrl100 = resultInfoData["artworkUrl100"] as? String ?? ""
-        collectionPrice = resultInfoData["collectionPrice"] as? Double ?? 0
         trackCount = resultInfoData["trackCount"] as? Int ?? 0
         primaryGenreName = resultInfoData["primaryGenreName"] as? String ?? ""
+    }
+    
+    init(collectionName: String, artworkUrl100: String, collectionPrice: Double, trackCount: Int, primaryGenreName: String) {
+        self.collectionName = collectionName
+        self.artworkUrl100 = artworkUrl100
+        self.trackCount = trackCount
+        self.primaryGenreName = primaryGenreName
     }
 }

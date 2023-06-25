@@ -33,7 +33,7 @@ final class NetworkManager {
             }
     }
     
-    func fetchData(from url: URL, completion: @escaping(Result<Data, AFError>) -> Void) {
+    func fetchData(from url: String, completion: @escaping(Result<Data, AFError>) -> Void) {
         AF.request(url)
             .validate()
             .responseData { dataResponse in
